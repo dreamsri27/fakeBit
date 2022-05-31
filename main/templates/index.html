@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container shadow"
+       style="padding: 3em; height:100vh;">
+    <form method="post">
+      {% csrf_token %}
+      
+      <h3 class="title-font font-medium text-3xl text-white">Billing For Demo Company</h3><br>
+      <div class="input-group mb-3">
+        <label for="full-name" class="leading-7 text-sm text-gray-400">Full Name</label>
+        <input type="text" autocomplete="off"
+               class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               aria-describedby="inputGroup-sizing-default"
+               name="name"
+               autofocus>
+      </div>
+      <div class="input-group mb-3">
+        <label for="full-name" class="leading-7 text-sm text-gray-400">Number</label>
+        <input type="text" autocomplete="off"
+               class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               aria-describedby="inputGroup-sizing-default"
+               name="number"
+               autofocus>
+      </div>
+      <div class="input-group mb-3">
+        <label for="full-name" class="leading-7 text-sm text-gray-400">Price</label>
+        <input type="text" autocomplete="off"
+               class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               aria-describedby="inputGroup-sizing-default"
+               name="price"
+               autofocus>
+      </div>
+      <div class="input-group mb-3">
+        <label for="full-name" class="leading-7 text-sm text-gray-400">Product</label>
+        <input type="text" autocomplete="off"
+               class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               aria-describedby="inputGroup-sizing-default"
+               name="product"
+               autofocus>
+      </div>
+      <div class="input-group mb-3">
+        <label for="full-name" class="leading-7 text-sm text-gray-400">Quantity</label>
+        <input type="text" autocomplete="off"
+               class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               aria-describedby="inputGroup-sizing-default"
+               name="quantity"
+               autofocus>
+      </div>
+      <div class="input-group mb-3">
+        <input type="submit" style="max-width: 200px; margin: auto" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+      </div>
+    </form>
+      <div class="input-group mb-3">
+        <div style="margin: auto">
+          {{ svg|safe }}
+        </div>
+      </div>
+  </div>
+</section>
+  {%endblock content%}

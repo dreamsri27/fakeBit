@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    .container {
+        display: grid;
+        grid: repeat(3, 12vw) / auto-flow;
+      }
+      
+      .row {
+        display: grid;
+        grid: repeat(1, 12vw) / auto-flow;
+      }
+      
+      .row > .square {
+        margin: 10px;
+        background: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      
+      @media (orientation: portrait) {
+        
+        .container {
+          transform: rotate(90deg) translate(35%);
+        }
+        
+        .row > .square {
+          transform: rotate(-90deg);
+        }
+      }
+    </style>
+<body>
+    <div class="container">
+        <div class="row">
+            {% for block in blocks %}
+            
+          <div class="square">{{block.timestamp}} 
+          </div>
+          
+          
+            {% endfor %}
+        </div>
+      </div>
+</body>
+</html>
